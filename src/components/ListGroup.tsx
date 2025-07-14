@@ -1,11 +1,14 @@
-import { MouseEvent, useState } from "react";
-function ListGroup() {
-  let items = ["Nairobi", "Mombasa", "Eldoret", "Kisumu", "Nakuru"];
+import React, { useState } from "react";
+interface Props {
+  items: string[];
+  heading: string;
+}
+function ListGroup({ items, heading }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       <ul className="list-group">
         {items.map((item, index) => (
           <li
