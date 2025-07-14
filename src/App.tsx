@@ -1,8 +1,8 @@
-import Messgage from "./Message";
+import ListGroup from "./components/ListGroup";
 function App() {
   return (
     <div>
-      <Messgage />
+      <ListGroup />
     </div>
   );
 }
